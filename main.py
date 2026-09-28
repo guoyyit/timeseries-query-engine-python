@@ -1,8 +1,5 @@
-from fastapi import FastAPI
+"""Service entry point: ``uvicorn main:app`` / ``uv run fastapi run``."""
 
-app = FastAPI()
+from tsdb.api import app
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+__all__ = ["app"]
